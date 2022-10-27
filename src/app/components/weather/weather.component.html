@@ -1,0 +1,12 @@
+<div class="weather">
+  <div class="weather__input">
+    <label for="lat" class="weather__description">Широта: </label>
+    <input id="lat" type="text" class="weather__field" [formControl]="lat">
+  </div>
+  <div class="weather__input">
+    <label for="long" class="weather__description">Долгота: </label>
+    <input id="long" type="text" class="weather__field" [formControl]="long">
+  </div>
+  <button class="weather__button" (click)="getWeather()">Показать погоду</button>
+  <h2 class="weather__data" *ngIf="weather !== undefined" [(ngModel)]="weather">{{weather.current.temperature}}</h2>
+</div>
