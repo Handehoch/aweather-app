@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'weather app';
-  amount: number[] = [1];
+  amount: number[] = [];
 
   createWeatherWidget() {
     this.amount.push(1);

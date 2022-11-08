@@ -50,10 +50,18 @@
   align-items: center;
   padding: inherit;
   margin-bottom: 10px;
+  font-size: 20px;
+  line-height: 100%;
 }
 
 .weather__temperature {
   margin: 0;
+}
+
+.weather__icon {
+  padding: 4px;
+  background-color: dodgerblue;
+  border-radius: 50%;
 }
 
 .weather__location {

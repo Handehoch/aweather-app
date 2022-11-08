@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { WeatherService } from '../../services/weather.service';
-import { WeatherData } from './weather-data';
+import { OpenWeatherData } from './weather-data';
 import {
   numberValidator,
   validateLat,
@@ -15,8 +15,7 @@ import {
 })
 export class WeatherComponent implements OnInit {
   form: FormGroup | undefined;
-  weather: WeatherData | undefined;
-  error: boolean = false;
+  weather!: OpenWeatherData;
   center: number[] = [];
 
   constructor(private readonly weatherService: WeatherService) {}
@@ -30,27 +29,24 @@ export class WeatherComponent implements OnInit {
   }
 
   onSubmit() {
-    this.getWeather();
+    this.getWeatherFromOpenWeather();
     this.center = [Number(this.lat?.value), Number(this.lon?.value)];
   }
 
-  getWeatherTest() {
-    this.weatherService.getWeatherTest().subscribe((res) => {
-      this.weather = res;
-      console.log(res);
-    });
-  }
-
-  getWeather() {
+  getWeatherFromOpenWeather() {
     this.weatherService
-      .getWeather({
+      .getFromOpenWeather({
         lat: Number(this.lat?.value),
         lon: Number(this.lon?.value),
       })
       .subscribe((res) => {
-        this.weather = res;
-        console.log(this.weather);
+        this.weather = res as OpenWeatherData;
+        console.log(res);
       });
+  }
+
+  generateIconPath(query: string) {
+    return `http://openweathermap.org/img/wn/${query}@2x.png`;
   }
 
   ngOnInit(): void {

@@ -44,17 +44,16 @@
   </form>
 
   <div *ngIf="weather !== undefined" class="weather__data" [(ngModel)]="weather">
-    <p class="weather__temperature">
-      Температура: {{weather.current.temperature}}<br>
-      Ощущается как: {{weather.current.feelslike}}<br>
-      Скорость ветра: {{weather.current.wind_speed}}<br>
-      Описание: {{weather.current.weather_descriptions.join(', ')}}
-    </p>
-    <p class="weather__location">
-      Страна: {{weather.location.country}}<br>
-      Регион: {{weather.location.region}}<br>
-      Название: {{weather.location.name}}
-    </p>
+    <div class="weather__temperature">
+      <p>Температура: {{weather.main.temp}}</p>
+      <p>Ощущается как: {{weather.main.feels_like}}</p>
+      <p>Скорость ветра: {{weather.wind.speed}}</p>
+      <p>Описание: {{weather.weather.description | titlecase}}</p>
+      <p *ngIf="weather.name">Город: {{ weather.name | titlecase}}</p>
+      <p>Страна: {{ weather.sys.country | uppercase}}</p>
+    </div>
+    <p class="weather__location"></p>
+    <img class="weather__icon" [src]="generateIconPath(weather.weather.icon)" alt="Weather icon">
   </div>
 
   <div class="weather__map">
