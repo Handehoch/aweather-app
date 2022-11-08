@@ -1,0 +1,10 @@
+<h1 class="app__title">{{title | uppercase}}</h1>
+<ul class="app__list">
+  <li *ngFor="let amount of amount" class="app__item">
+    <app-weather></app-weather>
+  </li>
+  <li class="app__item app__item--buttons">
+    <button class="app__button" (click)="createWeatherWidget()">Создать виджет</button>
+    <button class="app__button" (click)="removeWeatherWidget()">Удалить виджет</button>
+  </li>
+</ul>

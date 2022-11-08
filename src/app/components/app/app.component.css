@@ -1,0 +1,56 @@
+.app__title {
+  display: block;
+  font-size: 36px;
+  text-align: center;
+}
+
+.app__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.app__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: calc(49% - 40px);
+  margin-bottom: 40px;
+  margin-right: 40px;
+}
+
+.app__item:not(:last-child) {
+  padding: 20px 0;
+  border: 3px solid crimson;
+  border-radius: 20px;
+}
+
+.app__item--buttons {
+  min-height: 50vh;
+}
+
+.app__button {
+  width: 100%;
+  height: 50%;
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.app__button:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.app__button:first-child {
+  background-color: dodgerblue;
+}
+
+.app__button:last-child {
+  background-color: crimson;
+  margin-top: auto;
+}
