@@ -11,7 +11,7 @@ Application had deployed on vercel server.
 There is a simple validation: 
   1) Field cannot be empty
   2) Query should be number
-  3) Specific validation for latitude([-90; 90]) and longitude ([-180; 180])
+  3) Specific validation for latitude [-90; 90] and longitude [-180; 180]
 
 ## Additional weather data
 
