@@ -37,5 +37,6 @@ Application is using Yandex API and [angular8-yandex-maps module](https://www.np
 
 ## Sample photo
 
-(https://user-images.githubusercontent.com/95305283/200841311-e1399368-14c1-4b7d-935e-c90bb4dce5c6.png)
+![aweather-app-handehoch vercel app_](https://user-images.githubusercontent.com/95305283/200841531-7692399b-3ea9-430a-95ae-8fd4b9a2d559.png)
+
 
