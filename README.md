@@ -33,7 +33,7 @@ pressing red one will destroy last widget
 
 ## Map
 
-Application is using Yandex API and [angular8-yandex-maps module](https://www.npmjs.com/package/angular8-yandex-maps)![aweather-app-handehoch vercel app_]
+Application is using Yandex API and [angular8-yandex-maps module](https://www.npmjs.com/package/angular8-yandex-maps)
 
 ## Sample photo
 
