@@ -44,7 +44,7 @@
   </form>
 
   <div *ngIf="weather !== undefined" class="weather__data" [(ngModel)]="weather">
-    <div class="weather__temperature">
+    <div class="weather__info">
       <p>Температура: {{weather.main.temp}}</p>
       <p>Ощущается как: {{weather.main.feels_like}}</p>
       <p>Скорость ветра: {{weather.wind.speed}}</p>

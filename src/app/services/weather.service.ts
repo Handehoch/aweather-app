@@ -16,7 +16,7 @@ export class WeatherService {
         params: {
           lat: dto.lat,
           lon: dto.lon,
-          appid: 'fe12eae3650d46d2a19e332acc8c19a5',
+          appid: process.env['OPENWEATHER_API'] as string,
           units: 'metric',
         },
       })

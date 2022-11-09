@@ -17,7 +17,7 @@ import { AngularYandexMapsModule } from 'angular8-yandex-maps';
     FormsModule,
     NgOptimizedImage,
     AngularYandexMapsModule.forRoot({
-      apikey: 'b9c3e9a2-c071-4bc7-9f06-c369a12ad0a5',
+      apikey: process.env['YANDEX_API'] as string,
       lang: 'ru_RU',
     }),
   ],
