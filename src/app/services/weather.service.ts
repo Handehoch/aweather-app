@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { IGetWeatherDto } from '../components/weather/get-weather.dto';
 import { map } from 'rxjs';
 import { OpenWeatherData } from '../components/weather/weather-data';
-import { environment } from '../../environments/environment.prod';
 
 @Injectable({
   providedIn: 'root',
@@ -17,7 +16,7 @@ export class WeatherService {
         params: {
           lat: dto.lat,
           lon: dto.lon,
-          appid: environment.openWeatherApi,
+          appid: process.env['openWeatherApi'] as string,
           units: 'metric',
         },
       })

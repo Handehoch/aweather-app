@@ -6,7 +6,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgOptimizedImage } from '@angular/common';
 import { AngularYandexMapsModule } from 'angular8-yandex-maps';
-import { environment } from '../../../environments/environment.prod';
 
 @NgModule({
   declarations: [AppComponent, WeatherComponent],
@@ -17,7 +16,7 @@ import { environment } from '../../../environments/environment.prod';
     FormsModule,
     NgOptimizedImage,
     AngularYandexMapsModule.forRoot({
-      apikey: environment.yandexApi,
+      apikey: process.env['yandexApi'] as string,
       lang: 'ru_RU',
     }),
   ],
