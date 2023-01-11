@@ -1,27 +1,42 @@
-# AweatherApp
+# Angular weather app
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.4.
+It's simple angular application, that shows current weather by latitude and longitude. You can put your query in fields.
+Application uses Openweather API to get json data.
 
-## Development server
+Application had deployed on vercel server.
+[Weather app](https://aweather-app-handehoch.vercel.app/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Validation
 
-## Code scaffolding
+There is a simple validation: 
+  1) Field cannot be empty
+  2) Query should be number
+  3) Specific validation for latitude [-90; 90] and longitude [-180; 180]
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Additional weather data
 
-## Build
+Application also shows some additional info besides temperature:
+  1) Feels like
+  2) Wind speed
+  3) Short description
+  4) City
+  5) Country code
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Weather icon
 
-## Running unit tests
+There is a situable icon near weather data.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Creating and removing widgets
 
-## Running end-to-end tests
+By pressing blue button you can create brand new weather widget with own form, map and button,
+pressing red one will destroy last widget
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Map
 
-## Further help
+Application is using Yandex API and [angular8-yandex-maps module](https://www.npmjs.com/package/angular8-yandex-maps)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Sample photo
+
+![aweather-app-handehoch vercel app_](https://user-images.githubusercontent.com/95305283/200841531-7692399b-3ea9-430a-95ae-8fd4b9a2d559.png)
+
+
