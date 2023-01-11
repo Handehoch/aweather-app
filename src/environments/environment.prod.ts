@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  yandexApi: 'b9c3e9a2-c071-4bc7-9f06-c369a12ad0a5',
+  yandexApi: 'a6fa52ee-0f34-44df-b03c-155a735afaf3',
   openWeatherApi: 'fe12eae3650d46d2a19e332acc8c19a5',
 };
